@@ -1,19 +1,22 @@
-🎉 Birthday Wishes App
+# 🎉 Birthday Wishes App
 
-📌 A simple, customizable Android application to send/display heartfelt birthday wishes.
+📌 A simple, customizable **Android application** to send/display heartfelt birthday wishes.
 This project lets you personalize the birthday greeting with text, images, audio, or video to make birthdays special!
 
-🧠 What This App Does
+---
 
-🎂 Displays a birthday greeting screen.
+## 🧠 What This App Does
 
-🖼️ Shows images or animations from a pictures folder.
+* 🎂 Displays a birthday greeting screen.
+* 🖼️ Shows images or animations from a `pictures` folder.
+* 🎵 Plays audio or displays video from a `raw` folder.
+* 🛠️ Completely customizable images, videos, and texts.
 
-🎵 Plays audio or displays video from a raw folder.
+---
 
-🛠️ Completely customizable images, videos, and texts.
+## 🗂 Project Structure
 
-🗂 Project Structure
+```bash
 Birthday-Wishes/
 ├── app/  
 │   ├── src/main/assets/
@@ -28,92 +31,113 @@ Birthday-Wishes/
 ├── build.gradle
 ├── settings.gradle
 └── README.md
+```
 
-🧩 Configuring user.json
+---
 
-Before running the app, you must update the user.json file.
+## 🧩 Configuring `user.json`
+
+Before running the app, you must update the **`user.json`** file.
 This is where you define the birthday message, name, and other details.
 
-Example user.json:
+### Example `user.json`
 
+```json
 {
   "name": "John",
   "dob": "01/01/1999"
 }
+```
 
-🔧 What to Customize
-Key	Description
-name	The name of the person to wish
-dob   The date of birth of the person to wish
-imageFile	Image file in pictures/         ← Add any number of images of the person you want to wish
-audioFile	Audio file in raw/ (optional)   ← Can modify the birthday song with the one you like but keep in mind to keep the same file name.
-videoFile	Video file in raw/ (optional)   ← Can modify the birthday video with the one you like but keep in mind to keep the same file name.
+---
 
-🖼️ Adding Images
+## 🔧 What to Customize
 
-Add your desired images to the pictures/ folder.
-Recommended: Keep image sizes moderate (≈ 1080×1920 px or smaller) for performance.
+| Key         | Description                                             |
+| ----------- | ------------------------------------------------------- |
+| `name`      | The name of the person to wish                          |
+| `dob`       | The date of birth of the person                         |
+| `imageFile` | Image file in `pictures/` (you can add multiple images) |
+| `audioFile` | Audio file in `raw/` *(optional – keep same filename)*  |
+| `videoFile` | Video file in `raw/` *(optional – keep same filename)*  |
 
-🎶 Adding Audio / 📹 Video
+> ⚠️ For audio and video, you can replace the files, but **do not change the filenames** used in the code.
 
-Place audio (.mp3) or video (.mp4) files inside the raw/ folder under:
+---
 
+## 🖼️ Adding Images
+
+Add your desired images to the **`pictures/`** folder.
+
+**Recommended:**
+Keep image sizes moderate (around **1080×1920 px or smaller**) for better performance.
+
+---
+
+## 🎶 Adding Audio / 📹 Video
+
+Place audio (`.mp3`) or video (`.mp4`) files inside:
+
+```
 app/src/main/res/raw/
+```
 
+This allows Android Studio to bundle them correctly.
 
-This way Android Studio can package them properly into the app.
+> 📌 Audio and video are optional — if you don’t want them, simply don’t update anything in the `raw` folder.
 
-📌 Audio and video are optional — if you don’t want them, just don't update anything under raw folder.
+---
 
-🚀 How to Run in Android Studio
+## 🚀 How to Run in Android Studio
 
-Follow these simple steps to get the app up and running:
+Follow these simple steps:
 
-Clone the repo
+### 1. Clone the repository
 
+```bash
 git clone https://github.com/mestaabhishek/Birthday-Wishes.git
+```
 
+### 2. Open in Android Studio
 
-Open Android Studio
+* Choose **Open an existing project**
+* Select the cloned folder
 
-Choose Open an existing project.
+### 3. Sync Gradle
 
-Navigate to the cloned folder and open it.
+* Let Android Studio complete the Gradle sync
 
-Sync Gradle
+### 4. Update `user.json`
 
-Android Studio may prompt a “Gradle Sync” — allow it to finish.
+* Add the correct name and DOB
 
-Check user.json
+### 5. Add media files
 
-Make sure user.json is correctly filled out.
+* Images → `pictures/`
+* Audio/Video → `app/src/main/res/raw/`
 
-Add media files
+### 6. Run the app
 
-Put images in pictures/.
+* Select a device/emulator
+* Click **Run ▶️**
 
-Put audio/video in app/src/main/res/raw/.
+---
 
-Run on device/emulator
+## 🌟 Tips & Enhancements
 
-Select a connected device or emulator.
+* 🎁 Add custom fonts in `res/font/`
+* 🎉 Use animated GIFs or Lottie animations
+* 🔊 Add sound effects for extra fun
+* 🌙 Add dark mode support
 
-Click Run ▶️.
+---
 
-🌟 Tips & Enhancements
+## 💬 Want to Contribute?
 
-🎁 Add custom fonts in res/font/ and use them!
+You’re welcome to:
 
-🎉 Include animated GIFs or Lottie animations (needs a library).
+* 🛠️ Fix bugs
+* ✨ Add new themes
+* 📱 Support more layouts or languages
 
-🔊 Add sound effects if you want a musical greeting.
-
-💬 Want to Contribute?
-
-🛠️ Fix bugs
-
-✨ Add new themes
-
-📱 Support multiple screens or languages
-
-Contributions are welcome! 🙌
+Contributions are always appreciated! 🙌
